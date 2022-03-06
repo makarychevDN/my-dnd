@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 2138471821592128500}
   - component: {fileID: 2138471821592128501}
   - component: {fileID: 2138471821592128502}
+  - component: {fileID: 6447971116297196072}
   m_Layer: 5
   m_Name: Increase Button
   m_TagString: Untagged
@@ -186,7 +187,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2138471821592128501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6447971116297196072}
+        m_TargetAssemblyTypeName: "\u0421haracter\u0421haracteristicIncreaser, Assembly-CSharp"
+        m_MethodName: Calculate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6447971116297196072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138471821592128498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 084e69a80bbfae148a2f204f1e4f787d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 2138471822533133344}
+  decrease: 0
+  valueKey: 0
 --- !u!1 &2138471821788873652
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +227,7 @@ GameObject:
   - component: {fileID: 2138471821788873662}
   - component: {fileID: 2138471821788873663}
   - component: {fileID: 2138471821788873656}
+  - component: {fileID: 4839904021970797143}
   m_Layer: 5
   m_Name: Decrease Button
   m_TagString: Untagged
@@ -307,7 +336,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2138471821788873663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4839904021970797143}
+        m_TargetAssemblyTypeName: "\u0421haracter\u0421haracteristicIncreaser, Assembly-CSharp"
+        m_MethodName: Calculate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4839904021970797143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138471821788873652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 084e69a80bbfae148a2f204f1e4f787d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 2138471822533133344}
+  decrease: 1
+  valueKey: 0
 --- !u!1 &2138471821997299170
 GameObject:
   m_ObjectHideFlags: 0

@@ -326,6 +326,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6248702394168316578}
     m_Modifications:
+    - target: {fileID: 710874370550365613, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: valueKey
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 827600636190158404, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: characterKey
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 925267363305762410, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: characterKey
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408651385092124114, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: valueKey
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5551569597492397171, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
@@ -492,6 +508,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6248702394168316578}
     m_Modifications:
+    - target: {fileID: 710874370550365613, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: valueKey
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 827600636190158404, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: characterKey
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 925267363305762410, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: characterKey
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408651385092124114, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: valueKey
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5551569597492397171, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
@@ -666,6 +698,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6248702394168316578}
     m_Modifications:
+    - target: {fileID: 710874370550365613, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: valueKey
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 827600636190158404, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: characterKey
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 925267363305762410, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: characterKey
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408651385092124114, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
+      propertyPath: valueKey
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5551569597492397171, guid: f9c1b424de005b942be11b3125a212bb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 

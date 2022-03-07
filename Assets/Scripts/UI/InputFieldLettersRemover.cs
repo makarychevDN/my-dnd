@@ -15,6 +15,9 @@ public class InputFieldLettersRemover : MonoBehaviour
         _inputField = GetComponent<TMP_InputField>();
     }
 
-    public void RemoveLetters() =>
-        _inputField.text = new string(_inputField.text.Where(char.IsNumber).ToArray());
+    public void RemoveLetters()
+    {
+        _inputField.text =
+            $"{(_inputField.text[0] == '-' ? "-" : "")}{new string(_inputField.text.Where(chr => (char.IsNumber(chr))).ToArray())}";
+    }
 }

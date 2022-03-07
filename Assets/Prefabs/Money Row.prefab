@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5811407034001757505}
   - component: {fileID: 5811407034001757508}
   - component: {fileID: 5997292422372154928}
-  - component: {fileID: 925267363305762410}
+  - component: {fileID: 4327961219414245974}
   m_Layer: 5
   m_Name: InputField (TMP)
   m_TagString: Untagged
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f74d7107d93fe804f82f819fd24a5fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &925267363305762410
+--- !u!114 &4327961219414245974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,11 +237,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5811407034001757507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8244a3502259d846a2f29da92c98a83, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b9218e2353196945af28df6e5ad4578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterKey: 0
   inputField: {fileID: 5811407034001757505}
+  dataKey: 0
 --- !u!1 &5811407034513306604
 GameObject:
   m_ObjectHideFlags: 0

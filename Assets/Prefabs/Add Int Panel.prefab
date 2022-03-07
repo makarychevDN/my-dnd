@@ -78,7 +78,6 @@ GameObject:
   - component: {fileID: 2138471821592128500}
   - component: {fileID: 2138471821592128501}
   - component: {fileID: 2138471821592128502}
-  - component: {fileID: 8583832222022851697}
   m_Layer: 5
   m_Name: Increase Button
   m_TagString: Untagged
@@ -188,13 +187,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8583832222022851697}
-        m_TargetAssemblyTypeName: IntCharacterDataUpdater, Assembly-CSharp
-        m_MethodName: Increase
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -212,20 +211,6 @@ MonoBehaviour:
           m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8583832222022851697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138471821592128498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b580d455d390f934493536016f28b5c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  provider: {fileID: 5741397574693968104}
-  key: 0
 --- !u!1 &2138471821788873652
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +223,6 @@ GameObject:
   - component: {fileID: 2138471821788873662}
   - component: {fileID: 2138471821788873663}
   - component: {fileID: 2138471821788873656}
-  - component: {fileID: 2685097354730292188}
   m_Layer: 5
   m_Name: Decrease Button
   m_TagString: Untagged
@@ -348,13 +332,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2685097354730292188}
-        m_TargetAssemblyTypeName: IntCharacterDataUpdater, Assembly-CSharp
-        m_MethodName: Decrease
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -372,20 +356,6 @@ MonoBehaviour:
           m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2685097354730292188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138471821788873652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b580d455d390f934493536016f28b5c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  provider: {fileID: 5741397574693968104}
-  key: 0
 --- !u!1 &2138471821997299170
 GameObject:
   m_ObjectHideFlags: 0

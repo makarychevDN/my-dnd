@@ -5,11 +5,19 @@ using UnityEngine;
 
 public class IntCharacterDataUpdater : CharacterDataUpdater<IntProvider>
 {
-    [SerializeField] private DataKey key;
-    
-    public void Set() => MyCharacterData.Set(key, provider.TakeValue());
+    [SerializeField] private Key key;
 
-    public void Increase() => MyCharacterData.Increase(key, provider.TakeValue());
+    public void Set()
+    {
+    }
 
-    public void Decrease() => MyCharacterData.Decrease(key, provider.TakeValue());
+    public void Increase()
+    {
+        //MyCharacterData.Increase(key, provider.TakeValue());
+    }
+
+    public void Decrease()
+    {
+        //MyCharacterData.Decrease(key, provider.TakeValue());
+    }
 }

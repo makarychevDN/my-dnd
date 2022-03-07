@@ -7,13 +7,13 @@ using UnityEngine;
 public class InputFieldSynchronizer : BaseSynchronizer
 {
     [SerializeField] private TMP_InputField inputField;
-    [SerializeField] private DataKey dataKey;
+    [SerializeField] private Key key;
 
     protected override void Synchronize()
     {
-        if (MyCharacterData.Get(dataKey).ToString() == inputField.text)
+        /*if (MyCharacterData.Instance.Get(key).ToString() == inputField.text)
             return;
 
-        inputField.text = MyCharacterData.Get(dataKey).ToString();
+        inputField.text = MyCharacterData.Instance.Get(key).ToString();*/
     }
 }

@@ -15,6 +15,8 @@ public class MoneyPanel : BaseSynchronizer
     public void DecreaseCount(IntProvider provider) => DecreaseCount(provider.TakeValue());
     public void IncreaseCount(IntProvider provider) => IncreaseCount(provider.TakeValue());
     
+    public void SetCount(IntProvider provider) => Money.Instance.SetCount(type, provider.TakeValue());
+
 
     protected override void Synchronize()
     {

@@ -1,14 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Health : BaseSynchronizer
+public class Health : MonoBehaviour
 {
-    [SerializeField] private Slider slider;
-    [SerializeField] private TMP_Text text;
-    
+    public static Health Instance;
+
     [SerializeField] private int maxHealth;
     public int MaxHealth
     {
@@ -30,21 +30,10 @@ public class Health : BaseSynchronizer
             MyCharacterData.OnValueChanged.Invoke();
         }
     }
-
-    public void SetHealth(int value) => CurrentHealth = value;
-    public void SetHealth(IntProvider provider) => CurrentHealth = provider.TakeValue();
-
-    public void DecreaseHealth(int value) => CurrentHealth -= value;
-    public void IncreaseHealth(int value) => CurrentHealth += value;
     
-    public void DecreaseHealth(IntProvider provider) => CurrentHealth -= provider.TakeValue();
-    public void IncreaseHealth(IntProvider provider) => CurrentHealth += provider.TakeValue();
-    
-
-    protected override void Synchronize()
+    private void Awake()
     {
-        text.text = currentHealth.ToString();
-        slider.maxValue = maxHealth;
-        slider.value = currentHealth;
+        if (Instance == null)
+            Instance = this;
     }
 }

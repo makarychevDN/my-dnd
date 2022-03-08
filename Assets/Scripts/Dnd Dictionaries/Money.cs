@@ -1,40 +1,48 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Money : BaseSynchronizer
+public class Money : MonoBehaviour
 {
-    [SerializeField] private moneyType type;
-    [SerializeField] private TMP_InputField inputField;
+    public static Money Instance;
 
-    [SerializeField] private int count;
-    public int Count
+    [SerializeField] private List<MoneyUnit> inputMoneyUnits;
+    private Dictionary<MoneyType, int> _moneyUnits;
+
+    public void SetCount(MoneyType key, int value)
     {
-        get => count;
-        set
-        {
-            count = value;
-            MyCharacterData.OnValueChanged.Invoke();
-        }
+        _moneyUnits[key] = value;
+        MyCharacterData.OnValueChanged.Invoke();
     }
 
-    public void DecreaseCount(int value) => Count -= value;
-    public void IncreaseCount(int value) => Count += value;
-    
-    public void DecreaseCount(IntProvider provider) => Count -= provider.TakeValue();
-    public void IncreaseCount(IntProvider provider) => Count += provider.TakeValue();
-    
+    public int GetCount(MoneyType key) => _moneyUnits[key];
 
-    protected override void Synchronize()
+    private void Awake()
     {
-        inputField.text = count.ToString();
+        if (Instance == null)
+            Instance = this;
+
+        _moneyUnits = new Dictionary<MoneyType, int>();
+
+        foreach (var VARIABLE in inputMoneyUnits)
+        {
+            _moneyUnits.Add(VARIABLE.key, VARIABLE.count);
+        }
     }
 }
 
-public enum moneyType
+[Serializable]
+public struct MoneyUnit
+{
+    public MoneyType key;
+    public int count;
+}
+
+public enum MoneyType
 {
     Gold = 1, Silver = 2, Copper = 3
 }

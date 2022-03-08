@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 8551322151090688696}
   - component: {fileID: 8551322151090688698}
   - component: {fileID: 8551322151090688699}
-  - component: {fileID: 7491167813423329925}
+  - component: {fileID: 7390799819963767814}
   m_Layer: 5
   m_Name: Health Panel
   m_TagString: Untagged
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7491167813423329925
+--- !u!114 &7390799819963767814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,13 +164,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8551322151090688697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1170791c51e7a84498c6dee43bb0c84d, type: 3}
+  m_Script: {fileID: 11500000, guid: 33c1b7a76ed3d6b4a926cabbd46653f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 8551322151706106806}
   text: {fileID: 8551322152640505421}
-  maxHealth: 100
-  currentHealth: 50
 --- !u!1 &8551322151184676087
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,9 +471,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7491167813423329925}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: SetHealth
+      - m_Target: {fileID: 7390799819963767814}
+        m_TargetAssemblyTypeName: HealthPanel, Assembly-CSharp
+        m_MethodName: SetCurrentHealth
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7468161811319631878}
@@ -993,7 +991,7 @@ PrefabInstance:
     - target: {fileID: 2138471821592128502, guid: b3af46bb26df1c144909aca401e2df1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7491167813423329925}
+      objectReference: {fileID: 7390799819963767814}
     - target: {fileID: 2138471821592128502, guid: b3af46bb26df1c144909aca401e2df1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1012,7 +1010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138471821592128502, guid: b3af46bb26df1c144909aca401e2df1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Health, Assembly-CSharp
+      value: HealthPanel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2138471821592128502, guid: b3af46bb26df1c144909aca401e2df1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1049,7 +1047,7 @@ PrefabInstance:
     - target: {fileID: 2138471821788873656, guid: b3af46bb26df1c144909aca401e2df1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7491167813423329925}
+      objectReference: {fileID: 7390799819963767814}
     - target: {fileID: 2138471821788873656, guid: b3af46bb26df1c144909aca401e2df1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1068,7 +1066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138471821788873656, guid: b3af46bb26df1c144909aca401e2df1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Health, Assembly-CSharp
+      value: HealthPanel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2138471821788873656, guid: b3af46bb26df1c144909aca401e2df1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName

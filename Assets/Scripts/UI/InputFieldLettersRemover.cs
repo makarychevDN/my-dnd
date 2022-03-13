@@ -8,11 +8,12 @@ using UnityEngine;
 
 public class InputFieldLettersRemover : MonoBehaviour
 {
-    private TMP_InputField _inputField;
+    [SerializeField] private TMP_InputField _inputField;
     
     private void Awake()
     {
-        _inputField = GetComponent<TMP_InputField>();
+        if(_inputField == null)
+            _inputField = GetComponent<TMP_InputField>();
     }
 
     public void RemoveLetters()

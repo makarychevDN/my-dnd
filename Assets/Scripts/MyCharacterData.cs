@@ -7,9 +7,4 @@ public class MyCharacterData : MonoBehaviour
 {
     public static UnityEvent OnValueChanged = new();
     public static MyCharacterData Instance;
-
-    public Stats stats;
-    public Money money;
-    
-    
 }

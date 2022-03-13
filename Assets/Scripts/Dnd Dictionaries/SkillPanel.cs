@@ -6,7 +6,6 @@ public class SkillPanel : BaseSynchronizer
     [SerializeField] private Skill skill;
     [SerializeField] private TMP_InputField valueInputField;
     [SerializeField] private TMP_InputField nameInputField;
-    [SerializeField] private TMP_Text nameLabel;
 
 
     public Skill Skill
@@ -21,8 +20,11 @@ public class SkillPanel : BaseSynchronizer
 
     protected override void Synchronize()
     {
-        valueInputField.text = skill.value.ToString();
-        nameInputField.text = skill.name;
-        nameLabel.text = skill.name;
+        valueInputField.text = skill.Value.ToString();
+        nameInputField.text = skill.Name;
     }
+
+    public void SetValue(IntProvider provider) => skill.Value = provider.TakeValue();
+    
+    public void SetName(StringProvider provider) => skill.Name = provider.TakeValue();
 }

@@ -18,7 +18,14 @@ public class InputFieldLettersRemover : MonoBehaviour
 
     public void RemoveLetters()
     {
-        _inputField.text =
-            $"{(_inputField.text[0] == '-' ? "-" : "")}{new string(_inputField.text.Where(chr => (char.IsNumber(chr))).ToArray())}";
+        try
+        {
+            _inputField.text =
+                $"{(_inputField.text[0] == '-' ? "-" : "")}{new string(_inputField.text.Where(chr => (char.IsNumber(chr))).ToArray())}";
+        }
+        catch (Exception e)
+        {
+            _inputField.text = "0";
+        }
     }
 }

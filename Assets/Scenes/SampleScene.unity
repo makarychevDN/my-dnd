@@ -2723,7 +2723,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7849011666834467282}
+        m_TargetAssemblyTypeName: HitsAndSomeShitPanel, Assembly-CSharp
+        m_MethodName: SetArmorClass
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 812714417}
+          m_ObjectArgumentAssemblyTypeName: IntProvider, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -4101,6 +4113,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 50
+--- !u!1 &1153590147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153590148}
+  - component: {fileID: 1153590149}
+  m_Layer: 0
+  m_Name: Armor Class
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1153590148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153590147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1443997349}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1153590149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153590147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0962064f993529247af6faa94c760910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
 --- !u!1 &1175117264
 GameObject:
   m_ObjectHideFlags: 0
@@ -4112,7 +4169,7 @@ GameObject:
   - component: {fileID: 1175117265}
   - component: {fileID: 1175117266}
   m_Layer: 5
-  m_Name: Stat (1)
+  m_Name: Armor Class
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5307,6 +5364,8 @@ Transform:
   - {fileID: 1129994642}
   - {fileID: 1871857133}
   - {fileID: 1858265523}
+  - {fileID: 1153590148}
+  - {fileID: 1746044786}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5793,6 +5852,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704723080}
   m_CullTransparentMesh: 1
+--- !u!1 &1746044785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1746044786}
+  - component: {fileID: 1746044787}
+  m_Layer: 0
+  m_Name: Master Bonus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1746044786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746044785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1443997349}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1746044787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746044785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c454306a4c5244c4fafcc3337fd9a353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
 --- !u!1 &1803449887
 GameObject:
   m_ObjectHideFlags: 0
@@ -11882,7 +11986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716200035694494110, guid: da46752d6869c824bab1b1c2066c34eb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0005592075
+      value: 0.00018667759
       objectReference: {fileID: 0}
     - target: {fileID: 5360188939115874966, guid: da46752d6869c824bab1b1c2066c34eb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -15273,7 +15377,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7849011666834467282}
+        m_TargetAssemblyTypeName: HitsAndSomeShitPanel, Assembly-CSharp
+        m_MethodName: SetMasterBonus
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8711168436540392585}
+          m_ObjectArgumentAssemblyTypeName: IntProvider, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -17029,6 +17145,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9004845330873994567}
     m_Modifications:
+    - target: {fileID: 994868848542653611, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994868848542653611, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994868848542653611, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 994868848542653611, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1155055948989816527, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -17042,6 +17174,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1155055948989816527, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646908170517861030, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646908170517861030, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646908170517861030, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646908170517861030, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -17868,8 +18016,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: {fileID: 1257997357}
   maxHealth: {fileID: 1361236157}
-  armorClass: {fileID: 0}
-  masterBonus: {fileID: 0}
+  armorClass: {fileID: 812714420}
+  masterBonus: {fileID: 5899640640681563448}
 --- !u!114 &7906650056166476357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18982,7 +19130,7 @@ GameObject:
   - component: {fileID: 3568144160571789901}
   - component: {fileID: 8021793545384061389}
   m_Layer: 5
-  m_Name: Stat
+  m_Name: Master Bonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

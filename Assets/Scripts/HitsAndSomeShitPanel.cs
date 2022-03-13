@@ -14,12 +14,16 @@ public class HitsAndSomeShitPanel : BaseSynchronizer
     {
         currentHealth.text = Health.Instance.CurrentHealth.ToString();
         maxHealth.text = Health.Instance.MaxHealth.ToString();
+        armorClass.text = ArmorClass.Instance.Value.ToString();
+        masterBonus.text = MasterBonus.Instance.Value.ToString();
     }
     
-    public void SetCurrentHealth(int value) => Health.Instance.CurrentHealth = value;
     public void SetCurrentHealth(IntProvider provider) => Health.Instance.CurrentHealth = provider.TakeValue();
     
-    public void SetMaxHealth(int value) => Health.Instance.MaxHealth = value;
     public void SetMaxHealth(IntProvider provider) => Health.Instance.MaxHealth = provider.TakeValue();
+    
+    public void SetArmorClass(IntProvider provider) => ArmorClass.Instance.Value = provider.TakeValue();
+    
+    public void SetMasterBonus(IntProvider provider) => MasterBonus.Instance.Value = provider.TakeValue();
     
 }

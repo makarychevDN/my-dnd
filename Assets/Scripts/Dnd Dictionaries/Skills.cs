@@ -11,6 +11,21 @@ public class Skills : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        //MyCharacterData.OnValueChanged.Invoke();
+    }
+
+    public void AddSkill(Skill skill)
+    {
+        skills.Add(skill);
+        MyCharacterData.OnValueChanged.Invoke();
+    }
+    
+    public void RemoveSkill(Skill skill)
+    {
+        if(!skills.Contains(skill))
+            return;
+        
+        skills.Remove(skill);
         MyCharacterData.OnValueChanged.Invoke();
     }
 }

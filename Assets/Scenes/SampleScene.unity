@@ -1964,6 +1964,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618861093}
   m_CullTransparentMesh: 1
+--- !u!1 &627317392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627317393}
+  - component: {fileID: 627317394}
+  m_Layer: 5
+  m_Name: Default Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &627317393
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627317392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2916296374198026982}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &627317394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627317392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8ce95d38ad28646b98b3c2dcf419b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: "\u043D\u0430\u0432\u044B\u043A"
+  value: 1
 --- !u!1 &630264113
 GameObject:
   m_ObjectHideFlags: 0
@@ -10932,7 +10983,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 627317393}
   m_Father: {fileID: 1982380198019780479}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11675,7 +11727,7 @@ GameObject:
   - component: {fileID: 4991693114925311982}
   - component: {fileID: 9004845330873994568}
   m_Layer: 5
-  m_Name: Panel (2)
+  m_Name: Skills Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12133,7 +12185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716200035694494110, guid: da46752d6869c824bab1b1c2066c34eb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00007668088
+      value: 0.00014354556
       objectReference: {fileID: 0}
     - target: {fileID: 5360188939115874966, guid: da46752d6869c824bab1b1c2066c34eb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -15422,8 +15474,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5800618751884450146}
-        m_TargetAssemblyTypeName: PanelInstanser, Assembly-CSharp
-        m_MethodName: InstantiatePanel
+        m_TargetAssemblyTypeName: SkillAdder, Assembly-CSharp
+        m_MethodName: Add
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15442,12 +15494,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5148555835505693720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eaa3eebe9247d540b35bdf6bb602380, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c248eb5b615ef14a8000882872631d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentOfInstance: {fileID: 9004845330873994567}
-  panelOfAddButton: {fileID: 1982380198019780479}
-  prefab: {fileID: 3027129079109696858, guid: c9ab5470ab3d1194db2d89cd29cfeab6, type: 3}
+  defaultSkill: {fileID: 627317394}
 --- !u!224 &5831890654568477256
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19160,7 +19210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1982380198019780479}
   m_Layer: 5
-  m_Name: Add Int Panel
+  m_Name: Add Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -24,6 +24,7 @@ public class AbilityResource : MonoBehaviour
         set
         { 
             currentCount = value;
+            currentCount = Mathf.Clamp(currentCount, 0, maxCount);
             MyCharacterData.OnValueChanged.Invoke();
         }
     }

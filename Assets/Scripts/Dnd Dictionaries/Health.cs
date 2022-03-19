@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
         set
         {
             currentHealth = value;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             MyCharacterData.OnValueChanged.Invoke();
         }
     }

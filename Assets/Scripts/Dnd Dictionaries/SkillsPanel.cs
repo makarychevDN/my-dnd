@@ -11,22 +11,21 @@ public class SkillsPanel : BaseSynchronizer
     
     protected override void Synchronize()
     {
-        for (int i = 0; i < skillPanels.Count; i++)
+        if(skillPanels.Count == Skills.Instance.skills.Count)
+            return;
+        
+        foreach (var t in skillPanels)
         {
-            Destroy(skillPanels[i].gameObject);
+            Destroy(t.gameObject);
         }
 
         skillPanels = new List<SkillPanel>();
         
         for (int i = 0; i < Skills.Instance.skills.Count; i++)
         {
-            print(1);
             var tempPanel = Instantiate(panelPrefab, instancesParent);
-            print(2);
             skillPanels.Add(tempPanel);
-            print(3);
             tempPanel.Skill = Skills.Instance.skills[i];
-            print(4);
         }
         
         addButtonPanel.SetAsLastSibling();

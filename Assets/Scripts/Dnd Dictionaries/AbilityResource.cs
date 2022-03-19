@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill : MonoBehaviour
+public class AbilityResource : MonoBehaviour
 {
     [SerializeField] private new string name;
-    [SerializeField] private int value;
+    [SerializeField] private int currentCount;
+    [SerializeField] private int maxCount;
     
     public string Name
     {
@@ -17,12 +18,22 @@ public class Skill : MonoBehaviour
         }
     }
     
-    public int Value
+    public int Count
     {
-        get => value;
+        get => currentCount;
         set
         { 
-            this.value = value;
+            currentCount = value;
+            MyCharacterData.OnValueChanged.Invoke();
+        }
+    }
+    
+    public int MaxCount
+    {
+        get => maxCount;
+        set
+        { 
+            maxCount = value;
             MyCharacterData.OnValueChanged.Invoke();
         }
     }

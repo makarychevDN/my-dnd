@@ -22,7 +22,6 @@ public class AbilityResourcePanel : BaseSynchronizer
     
     protected override void Synchronize()
     {
-        print("daaamn im so synchronized");
         nameInputField.text = abilityResource.Name;
         currentValueInputField.text = abilityResource.Count.ToString();
         maxValueInputField.text = abilityResource.MaxCount.ToString();

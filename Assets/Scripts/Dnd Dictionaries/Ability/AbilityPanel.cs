@@ -34,9 +34,9 @@ public class AbilityPanel : BaseSynchronizer
     
     public void SetDiceValue(IntProvider provider) => ability.DiceValue = provider.TakeValue();
     
-    public void SetDiceCount(IntProvider provider) => ability.DiceValue = provider.TakeValue();
+    public void SetDiceCount(IntProvider provider) => ability.DiceCount = provider.TakeValue();
     
-    public void SetDiceAdditionDamage(IntProvider provider) => ability.DiceValue = provider.TakeValue();
+    public void SetDiceAdditionDamage(IntProvider provider) => ability.AdditionDamage = provider.TakeValue();
     
     public void SetDiceDamageType(DamageTypeProvider provider) => ability.DamageType = provider.TakeValue();
 }

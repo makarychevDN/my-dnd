@@ -24,6 +24,12 @@ public class Damage
         damageValues.Add(additionDamage);
         sum += additionDamage;
     }
+
+    public DamageType Type => damageType;
+
+    public int Sum => sum;
+
+    public List<int> DamageValues => damageValues;
 }
 
 public enum DamageType

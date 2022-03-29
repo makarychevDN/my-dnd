@@ -34,4 +34,44 @@ public class DamageCalculator : MonoBehaviour
         _damageStack.ForEach(damageInstance => sum += damageInstance.Sum);
         return sum;
     }
+
+    public Dictionary<DamageType, int> SumsOfDamageSortedByType()
+    {
+        Dictionary<DamageType, int> damageSumsSortedByType = new Dictionary<DamageType, int>();
+
+        foreach (var damageInstance in _damageStack)
+        {
+            if (damageSumsSortedByType.ContainsKey(damageInstance.Type))
+            {
+                damageSumsSortedByType[damageInstance.Type] += damageInstance.Sum;
+            }
+            
+            else
+            {
+                damageSumsSortedByType.Add(damageInstance.Type, damageInstance.Sum);
+            }
+        }
+
+        return damageSumsSortedByType;
+    }
+    
+    public Dictionary<DamageType, List<int>> SumsOfDetailedDamageSortedByType()
+    {
+        Dictionary<DamageType, List<int>> damageSumsSortedByType = new Dictionary<DamageType, List<int>>();
+
+        foreach (var damageInstance in _damageStack)
+        {
+            if (damageSumsSortedByType.ContainsKey(damageInstance.Type))
+            {
+                damageSumsSortedByType[damageInstance.Type] = damageInstance.DamageValues;
+            }
+            
+            else
+            {
+                damageSumsSortedByType.Add(damageInstance.Type, damageInstance.DamageValues);
+            }
+        }
+
+        return damageSumsSortedByType;
+    }
 }

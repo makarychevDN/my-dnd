@@ -10,8 +10,16 @@ public class HitSuccessPanel : BaseSynchronizer
     
     protected override void Synchronize()
     {
-        hitSuccessSumLabel.text = HitSuccessCalculator.Instance.Sum.ToString();
-        hitSuccessDetailedLabel.text =
-            $"дайс {HitSuccessCalculator.Instance.RollResult}\n{HitSuccessCalculator.Instance.MainStat.ToString()} {HitSuccessCalculator.Instance.MainStatValue}\nбма {HitSuccessCalculator.Instance.MasterBonus}";
+        try //todo не работает туть
+        {
+            hitSuccessSumLabel.text = HitSuccessCalculator.Instance.Sum.ToString();
+            hitSuccessDetailedLabel.text =
+                $"дайс {HitSuccessCalculator.Instance.RollResult}\n{HitSuccessCalculator.Instance.MainStat.ToString()} {HitSuccessCalculator.Instance.MainStatValue}\nбма {HitSuccessCalculator.Instance.MasterBonus}";
+        }
+        catch
+        {
+            hitSuccessSumLabel.text = "0";
+            hitSuccessDetailedLabel.text = "0";
+        }
     }
 }

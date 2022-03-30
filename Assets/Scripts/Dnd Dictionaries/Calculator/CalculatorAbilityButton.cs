@@ -25,6 +25,6 @@ public class CalculatorAbilityButton : BaseSynchronizer
 
     public void AddDamage()
     {
-        DamageCalculator.Instance.AddDamage(new Damage(ability.DamageType, ability.DiceCount, ability.DiceValue, ability.AdditionDamage));
+        DamageCalculator.Instance.AddDamage(new Damage(ability.DamageType, ability.DiceCount, ability.DiceValue, ability.AdditionDamage, ability.AbilityName));
     }
 } 

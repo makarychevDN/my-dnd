@@ -13,7 +13,7 @@ public class DamageCalculatorPanel : BaseSynchronizer
     protected override void Synchronize()
     {
         DamageSortedByTypesOutput();
-        DetailedDamageSortedByTypesOutput();
+        DetailedDamageOutput();
         damageSumLabel.text = DamageCalculator.Instance.Sum.ToString();
     }
 
@@ -47,6 +47,28 @@ public class DamageCalculatorPanel : BaseSynchronizer
             }
 
             sb.Append("(").Append(sumOfDamageSortedByType).Append(")").Append("\n");
+        }
+
+        detailedSortedDamageLabel.text = sb.ToString();
+    }
+
+    private void DetailedDamageOutput()
+    {
+        StringBuilder sb = new StringBuilder();
+        
+        foreach (var damageInstance in DamageCalculator.Instance.DamageStack)
+        {
+            sb.Append($"{damageInstance.SourceName} = {damageInstance.Sum}\t");
+
+            foreach (var unitDamage in damageInstance.DamageValues)
+            {
+                sb.Append($"{unitDamage}+");
+            }
+
+            if (sb.Length != 0 && sb[sb.Length - 1] == '+')
+                sb.Remove(sb.Length-1, 1);
+            
+            sb.Append("\n");
         }
 
         detailedSortedDamageLabel.text = sb.ToString();

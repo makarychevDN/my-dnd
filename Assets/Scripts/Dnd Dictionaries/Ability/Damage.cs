@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Damage
 {
+    [SerializeField] private string sourceName;
     [SerializeField] private DamageType damageType;
     [SerializeField] private int sum;
     [SerializeField] private List<int> damageValues;
 
-    public Damage(DamageType damageType, int diceCount, int diceValue, int additionDamage)
+    public Damage(DamageType damageType, int diceCount, int diceValue, int additionDamage, string sourceName)
     {
         this.damageType = damageType;
+        this.sourceName = sourceName;
         
         damageValues = new List<int>();
 
@@ -21,6 +23,9 @@ public class Damage
             sum += tempDamage;
         }
         
+        if(additionDamage == 0)
+            return;
+        
         damageValues.Add(additionDamage);
         sum += additionDamage;
     }
@@ -30,6 +35,8 @@ public class Damage
     public int Sum => sum;
 
     public List<int> DamageValues => damageValues;
+
+    public string SourceName => sourceName;
 }
 
 public enum DamageType

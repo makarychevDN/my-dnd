@@ -9,6 +9,7 @@ public class D20Button : MonoBehaviour
     public void Roll()
     {
         DamageCalculator.Instance.ClearDamage();
+        HitSuccessCalculator.Instance.Roll(mode);
     }
 }
 

@@ -41,12 +41,12 @@ public class HitSuccessCalculator : BaseSynchronizer
         {
             switch (mainStat)
             {
-                case Stats.сила : mainStatValue = MainStats.Instance.Strength; break;
-                case Stats.ловкость : mainStatValue = MainStats.Instance.Dexterity; break;
-                case Stats.выносливость : mainStatValue = MainStats.Instance.Strength; break;
-                case Stats.интеллект : mainStatValue = MainStats.Instance.Strength; break;
-                case Stats.мудрость : mainStatValue = MainStats.Instance.Strength; break;
-                case Stats.харизма : mainStatValue = MainStats.Instance.Strength; break;
+                case Stats.сила : mainStatValue = MainStats.Instance.StrengthMod; break;
+                case Stats.ловкость : mainStatValue = MainStats.Instance.DexterityMod; break;
+                case Stats.выносливость : mainStatValue = MainStats.Instance.EnduranceMod; break;
+                case Stats.интеллект : mainStatValue = MainStats.Instance.IntelligenceMod; break;
+                case Stats.мудрость : mainStatValue = MainStats.Instance.WisdomMod; break;
+                case Stats.харизма : mainStatValue = MainStats.Instance.CharismaMod; break;
             }
 
             return mainStatValue;
@@ -56,6 +56,12 @@ public class HitSuccessCalculator : BaseSynchronizer
     public int RollResult => rollResult;
 
     public Stats MainStat => mainStat;
+
+    public void SetMainStatByProvider(StatProvider statProvider)
+    {
+        mainStat = statProvider.TakeValue();
+        MyCharacterData.OnValueChanged.Invoke();
+    }
 }
 
 public enum Stats

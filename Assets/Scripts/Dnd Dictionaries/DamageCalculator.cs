@@ -17,6 +17,10 @@ public class DamageCalculator : MonoBehaviour
     public void AddDamage(Damage damage)
     {
         _damageStack.Add(damage);
+
+        Journal.Instance.AddDataInstance(
+            $"{damage.SourceName} ({damage.Type.ToString()}) = {damage.Sum} ({string.Join("+", damage.DamageValues)})");
+        
         MyCharacterData.OnValueChanged.Invoke();
     }
 

@@ -26,8 +26,20 @@ public class Health : MonoBehaviour
         get => currentHealth;
         set
         {
+            int hashedValue = currentHealth;
             currentHealth = value;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            
+            if (currentHealth < hashedValue)
+            {
+                Journal.Instance.AddDataInstance($"получено {hashedValue - currentHealth} урона ({hashedValue} => {currentHealth})");
+            }
+
+            if (currentHealth > hashedValue)
+            {
+                Journal.Instance.AddDataInstance($"восстановлено {currentHealth - hashedValue} здоровья ({hashedValue} => {currentHealth})");
+            }
+            
             MyCharacterData.OnValueChanged.Invoke();
         }
     }

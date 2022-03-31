@@ -12,6 +12,13 @@ public class HitSuccessCalculator : BaseSynchronizer
     private Stats mainStat = Stats.сила;
     private int mainStatValue;
 
+    private Dictionary<D20Mode, string> modeJournalFormatStrings = new Dictionary<D20Mode, string>()
+    {
+        {D20Mode.Advantage, "с преимуществом"},
+        {D20Mode.Disadvantage, "с помехой"},
+        {D20Mode.Default, ""},
+    };
+
     private void Awake()
     {
         Instance = this;
@@ -27,7 +34,10 @@ public class HitSuccessCalculator : BaseSynchronizer
             rollResult = Rolls.Min();
         else
             rollResult = Rolls[0];
-        
+
+
+        Journal.Instance.AddDataInstance(
+            $"бросок на попадание {modeJournalFormatStrings[mode]} {Sum} (дайс {rollResult} + бма {MasterBonus} + {mainStat.ToString()} {mainStatValue})");
         MyCharacterData.OnValueChanged.Invoke();
     }
 

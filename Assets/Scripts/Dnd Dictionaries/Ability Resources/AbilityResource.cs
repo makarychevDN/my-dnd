@@ -25,9 +25,21 @@ public class AbilityResource : MonoBehaviour
         { 
             if(currentCount == value)
                 return;
-            
+
+            int hashedValue = currentCount;
             currentCount = value;
             currentCount = Mathf.Clamp(currentCount, 0, maxCount);
+            
+            if (currentCount < hashedValue)
+            {
+                Journal.Instance.AddDataInstance($"потрачено {hashedValue - currentCount} {name} ({hashedValue} => {currentCount})");
+            }
+
+            if (currentCount > hashedValue)
+            {
+                Journal.Instance.AddDataInstance($"восстановлено {currentCount - hashedValue} {name} ({hashedValue} => {currentCount})");
+            }
+            
             MyCharacterData.OnValueChanged.Invoke();
         }
     }

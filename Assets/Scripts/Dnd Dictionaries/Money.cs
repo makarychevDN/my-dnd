@@ -13,13 +13,37 @@ public class Money : MonoBehaviour
     [SerializeField] private List<MoneyUnit> inputMoneyUnits;
     private Dictionary<MoneyType, int> _moneyUnits;
 
+    private Dictionary<MoneyType, string> moneyFormatStrings = new Dictionary<MoneyType, string>()
+    {
+        {MoneyType.Gold, "зм"},
+        {MoneyType.Silver, "см"},
+        {MoneyType.Copper, "мм"},
+    };
+    
     public void SetCount(MoneyType key, int value)
     {
+        Journal.Instance.AddDataInstance($"установлено значение {moneyFormatStrings[key]} в {value} (было {_moneyUnits[key]})");
         _moneyUnits[key] = value;
         MyCharacterData.OnValueChanged.Invoke();
     }
 
     public int GetCount(MoneyType key) => _moneyUnits[key];
+
+    public void IncreaseCount(MoneyType key, int value)
+    {
+        Journal.Instance.AddDataInstance(
+            $"получено {value} {moneyFormatStrings[key]} ({_moneyUnits[key]} => {_moneyUnits[key] + value})");
+        _moneyUnits[key] += value;
+        MyCharacterData.OnValueChanged.Invoke();
+    }
+    
+    public void DecreaseCount(MoneyType key, int value)
+    {
+        Journal.Instance.AddDataInstance(
+            $"потрачено {value} {moneyFormatStrings[key]} ({_moneyUnits[key]} => {_moneyUnits[key] - value})");
+        _moneyUnits[key] -= value;
+        MyCharacterData.OnValueChanged.Invoke();
+    }
 
     private void Awake()
     {

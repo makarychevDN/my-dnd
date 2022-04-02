@@ -38,6 +38,7 @@ public class Skills : MonoBehaviour
             Skill skill = go.AddComponent<Skill>();
             skill.Init(skillString[0], Convert.ToInt32(skillString[1]));
             skills.Add(skill);
+            go.name = skill.Name;
         }
     }
 

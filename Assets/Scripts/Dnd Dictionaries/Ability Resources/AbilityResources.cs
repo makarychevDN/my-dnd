@@ -35,9 +35,10 @@ public class AbilityResources : MonoBehaviour
             var skillString = skillStrings[i].Split('`');
             GameObject go = new GameObject();
             go.transform.parent = transform;
-            AbilityResource skill = go.AddComponent<AbilityResource>();
-            skill.Init(skillString[0], Convert.ToInt32(skillString[1]), Convert.ToInt32(skillString[2]));
-            abilityResources.Add(skill);
+            AbilityResource abilityResource = go.AddComponent<AbilityResource>();
+            abilityResource.Init(skillString[0], Convert.ToInt32(skillString[1]), Convert.ToInt32(skillString[2]));
+            abilityResources.Add(abilityResource);
+            go.name = abilityResource.Name;
         }
     }
 

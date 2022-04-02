@@ -33,7 +33,9 @@ public class Skills : MonoBehaviour
         for (int i = 0; i < skillStrings.Length; i++)
         {
             var skillString = skillStrings[i].Split('`');
-            Skill skill = Instantiate(new GameObject().AddComponent<Skill>(), transform);
+            GameObject go = new GameObject();
+            go.transform.parent = transform;
+            Skill skill = go.AddComponent<Skill>();
             skill.Init(skillString[0], Convert.ToInt32(skillString[1]));
             skills.Add(skill);
         }

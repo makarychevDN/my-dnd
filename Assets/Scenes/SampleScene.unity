@@ -2676,11 +2676,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d247d23ce043441841759ff12918e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityName: "\u0441\u0433\u0443\u0449\u0435\u043D\u043A\u0430"
+  abilityName: "\u0443\u0434\u0430\u0440 \u043A\u0438\u043D\u0436\u0430\u043B\u043E\u043C"
   diceCount: 1
   diceValue: 4
-  additionDamage: 6
-  damageType: 10
+  additionDamage: 0
+  damageType: 0
 --- !u!1 &480345381
 GameObject:
   m_ObjectHideFlags: 0

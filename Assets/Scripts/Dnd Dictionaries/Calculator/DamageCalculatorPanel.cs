@@ -58,7 +58,7 @@ public class DamageCalculatorPanel : BaseSynchronizer
         
         foreach (var damageInstance in DamageCalculator.Instance.DamageStack)
         {
-            sb.Append($"{damageInstance.SourceName} = {damageInstance.Sum}\t");
+            sb.Append($"{damageInstance.SourceName} = {damageInstance.Sum}\t(");
 
             foreach (var unitDamage in damageInstance.DamageValues)
             {
@@ -66,8 +66,11 @@ public class DamageCalculatorPanel : BaseSynchronizer
             }
 
             if (sb.Length != 0 && sb[sb.Length - 1] == '+')
+            {
                 sb.Remove(sb.Length-1, 1);
-            
+                sb.Append(")");
+            }
+
             sb.Append("\n");
         }
 

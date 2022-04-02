@@ -17,7 +17,7 @@ public class Journal : MonoBehaviour
 
     public void AddDataInstance(string dataInstance)
     {
-        data = data.Insert(0, $"{DateTime.Now.Hour}:{DateTime.Now.Minute}\n{dataInstance}\n\n");
+        data = data.Insert(0, $"{DateTime.Now:hh:mm:ss}\n{dataInstance}\n\n");
     }
 
     public void Clear()

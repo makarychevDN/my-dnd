@@ -8,7 +8,7 @@ public class AbilityAdder : MonoBehaviour
     
     public void Add()
     {
-        var newAbility = Instantiate(defaultAbility, Skills.Instance.transform);
+        var newAbility = Instantiate(defaultAbility, Abilities.Instance.transform);
         newAbility.name = defaultAbility.AbilityName;
         newAbility.AbilityName = defaultAbility.AbilityName;
         newAbility.DiceValue = defaultAbility.DiceValue;

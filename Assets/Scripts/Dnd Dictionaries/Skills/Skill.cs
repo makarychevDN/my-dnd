@@ -26,4 +26,10 @@ public class Skill : MonoBehaviour
             MyCharacterData.OnValueChanged.Invoke();
         }
     }
+
+    public void Init(string name, int value)
+    {
+        this.name = name;
+        this.value = value;
+    }
 }

@@ -10,7 +10,15 @@ public class Ability : MonoBehaviour
     [SerializeField] private int additionDamage;
     [SerializeField] private DamageType damageType;
 
-
+    public void Init(string abilityName, DamageType damageType, int diceCount, int diceValue, int additionDamage)
+    {
+        this.abilityName = abilityName;
+        this.damageType = damageType;
+        this.diceCount = diceCount;
+        this.diceValue = diceValue;
+        this.additionDamage = additionDamage;
+    }
+    
     public string AbilityName
     {
         get => abilityName;

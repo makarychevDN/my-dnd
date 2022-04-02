@@ -28,15 +28,15 @@ public class AbilityResources : MonoBehaviour
         if(PlayerPrefs.GetString("AbilityResources") == "")
             return;
         
-        var skillStrings = PlayerPrefs.GetString("AbilityResources").Split('~');
+        var abilityResourceStrings = PlayerPrefs.GetString("AbilityResources").Split('~');
 
-        for (int i = 0; i < skillStrings.Length; i++)
+        for (int i = 0; i < abilityResourceStrings.Length; i++)
         {
-            var skillString = skillStrings[i].Split('`');
+            var abilityResourceString = abilityResourceStrings[i].Split('`');
             GameObject go = new GameObject();
             go.transform.parent = transform;
             AbilityResource abilityResource = go.AddComponent<AbilityResource>();
-            abilityResource.Init(skillString[0], Convert.ToInt32(skillString[1]), Convert.ToInt32(skillString[2]));
+            abilityResource.Init(abilityResourceString[0], Convert.ToInt32(abilityResourceString[1]), Convert.ToInt32(abilityResourceString[2]));
             abilityResources.Add(abilityResource);
             go.name = abilityResource.Name;
         }

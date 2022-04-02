@@ -53,4 +53,11 @@ public class AbilityResource : MonoBehaviour
             MyCharacterData.OnValueChanged.Invoke();
         }
     }
+
+    public void Init(string name, int maxCount, int currentCount)
+    {
+        this.name = name;
+        this.maxCount = maxCount;
+        this.currentCount = currentCount;
+    }
 }

@@ -19,7 +19,9 @@ public class Money : MonoBehaviour
         {MoneyType.Silver, "см"},
         {MoneyType.Copper, "мм"},
     };
-    
+
+    public Dictionary<MoneyType, int> MoneyUnits => _moneyUnits;
+
     public void SetCount(MoneyType key, int value)
     {
         Journal.Instance.AddDataInstance($"установлено значение {moneyFormatStrings[key]} в {value} (было {_moneyUnits[key]})");
@@ -50,6 +52,27 @@ public class Money : MonoBehaviour
         if (Instance == null)
             Instance = this;
 
+        if (PlayerPrefs.HasKey(MoneyType.Gold.ToString()) && 
+            PlayerPrefs.HasKey(MoneyType.Silver.ToString()) &&
+            PlayerPrefs.HasKey(MoneyType.Copper.ToString()))
+        {
+            InitFromPlayerPrefs();
+            return;
+        }
+
+        InitFromInspectorData();
+    }
+
+    private void InitFromPlayerPrefs()
+    {
+        _moneyUnits = new Dictionary<MoneyType, int>();
+        _moneyUnits.Add(MoneyType.Gold, PlayerPrefs.GetInt(MoneyType.Gold.ToString()));
+        _moneyUnits.Add(MoneyType.Silver, PlayerPrefs.GetInt(MoneyType.Silver.ToString()));
+        _moneyUnits.Add(MoneyType.Copper, PlayerPrefs.GetInt(MoneyType.Copper.ToString()));
+    }
+
+    private void InitFromInspectorData()
+    {
         _moneyUnits = new Dictionary<MoneyType, int>();
 
         foreach (var VARIABLE in inputMoneyUnits)

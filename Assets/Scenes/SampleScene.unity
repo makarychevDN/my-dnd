@@ -6112,6 +6112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 975386777}
   - component: {fileID: 975386778}
+  - component: {fileID: 975386779}
   m_Layer: 0
   m_Name: Hit Success Calculator
   m_TagString: Untagged
@@ -6146,6 +6147,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac17918ca43f0924ca606191325a737f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &975386779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975386776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22085f16931d3443b54518495686eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageCalculator: {fileID: 975386778}
 --- !u!1 &978100315
 GameObject:
   m_ObjectHideFlags: 0
@@ -7393,6 +7407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1129994642}
   - component: {fileID: 1129994643}
+  - component: {fileID: 1129994644}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -7429,6 +7444,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 50
+--- !u!114 &1129994644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129994641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530349f5f53ca9946b7f607a6121e249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 1129994643}
 --- !u!1 &1153590147
 GameObject:
   m_ObjectHideFlags: 0
@@ -7439,6 +7467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1153590148}
   - component: {fileID: 1153590149}
+  - component: {fileID: 1153590150}
   m_Layer: 0
   m_Name: Armor Class
   m_TagString: Untagged
@@ -7474,6 +7503,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+--- !u!114 &1153590150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153590147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2e6e4a6aae34f4490e4651aac212a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armorClass: {fileID: 1153590149}
 --- !u!1 &1175117264
 GameObject:
   m_ObjectHideFlags: 0
@@ -9684,6 +9726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSuccessSumLabel: {fileID: 686792476}
   hitSuccessDetailedLabel: {fileID: 1584099984}
+  modificatorDropdown: {fileID: 1118725648}
 --- !u!1 &1548592615
 GameObject:
   m_ObjectHideFlags: 0
@@ -10715,6 +10758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746044786}
   - component: {fileID: 1746044787}
+  - component: {fileID: 1746044788}
   m_Layer: 0
   m_Name: Master Bonus
   m_TagString: Untagged
@@ -10750,6 +10794,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+--- !u!114 &1746044788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746044785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee9250368d9f0d4c9999ace295421fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterBonus: {fileID: 1746044787}
 --- !u!1 &1779268457
 GameObject:
   m_ObjectHideFlags: 0
@@ -11431,6 +11488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1858265523}
   - component: {fileID: 1858265524}
+  - component: {fileID: 1858265525}
   m_Layer: 0
   m_Name: Main Stats
   m_TagString: Untagged
@@ -11471,6 +11529,19 @@ MonoBehaviour:
   _intelligence: 0
   _wisdom: 0
   _charisma: 0
+--- !u!114 &1858265525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858265522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634dca9d1fb194840aecc42b27a2a740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainStats: {fileID: 1858265524}
 --- !u!1 &1860144227
 GameObject:
   m_ObjectHideFlags: 0
@@ -11657,6 +11728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1871857133}
   - component: {fileID: 1871857134}
+  - component: {fileID: 1871857135}
   m_Layer: 0
   m_Name: Money
   m_TagString: Untagged
@@ -11698,6 +11770,19 @@ MonoBehaviour:
     count: 15
   - key: 3
     count: 20
+--- !u!114 &1871857135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871857132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f074a65cd78aaa4a8c1f03727bd0726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: {fileID: 1871857134}
 --- !u!1 &1903981898
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,5 +48,11 @@ public class Health : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+        
+        if(!(PlayerPrefs.HasKey("MaxHealth") && PlayerPrefs.HasKey("CurrentHealth")))
+            return;
+
+        maxHealth = PlayerPrefs.GetInt("MaxHealth");
+        currentHealth = PlayerPrefs.GetInt("CurrentHealth");
     }
 }

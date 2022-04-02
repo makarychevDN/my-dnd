@@ -21,5 +21,8 @@ public class ArmorClass : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+
+        if (PlayerPrefs.HasKey("ArmorClass"))
+            value = PlayerPrefs.GetInt("ArmorClass");
     }
 }

@@ -22,6 +22,9 @@ public class HitSuccessCalculator : BaseSynchronizer
     private void Awake()
     {
         Instance = this;
+
+        if (PlayerPrefs.HasKey("LastChosenModificator"))
+            Enum.TryParse(PlayerPrefs.GetString("LastChosenModificator"), out mainStat);
     }
 
     public void Roll(D20Mode mode)

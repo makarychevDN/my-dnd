@@ -21,5 +21,8 @@ public class MasterBonus : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+        
+        if(PlayerPrefs.HasKey("MasterBonus"))
+            value = PlayerPrefs.GetInt("MasterBonus");
     }
 }

@@ -7,9 +7,12 @@ public class HitSuccessPanel : BaseSynchronizer
 {
     [SerializeField] private TMP_Text hitSuccessSumLabel;
     [SerializeField] private TMP_Text hitSuccessDetailedLabel;
+    [SerializeField] private TMP_Dropdown modificatorDropdown;
     
     protected override void Synchronize()
     {
+        modificatorDropdown.value = (int)HitSuccessCalculator.Instance.MainStat;
+        
         hitSuccessDetailedLabel.text =
             $"дайс {HitSuccessCalculator.Instance.RollResult}\n{HitSuccessCalculator.Instance.MainStat.ToString()} {HitSuccessCalculator.Instance.MainStatValue}\nбма {HitSuccessCalculator.Instance.MasterBonus}";
 

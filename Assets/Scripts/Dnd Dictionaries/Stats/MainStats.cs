@@ -24,6 +24,27 @@ public class MainStats : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        if (PlayerPrefs.HasKey("str"))
+        {
+            _strength = PlayerPrefs.GetInt("str");
+            _strengthMod = CalculateModifier(_strength);
+            
+            _dexterity = PlayerPrefs.GetInt("dex");
+            _dexterityMod = CalculateModifier(_dexterity);
+            
+            _endurance = PlayerPrefs.GetInt("end");
+            _enduranceMod = CalculateModifier(_endurance);
+            
+            _intelligence = PlayerPrefs.GetInt("int");
+            _intelligenceMod = CalculateModifier(_intelligence);
+            
+            _wisdom = PlayerPrefs.GetInt("wis");
+            _wisdomMod = CalculateModifier(_wisdom);
+            
+            _charisma = PlayerPrefs.GetInt("chr");
+            _charismaMod = CalculateModifier(_charisma);
+        }
     }
 
     public int Strength

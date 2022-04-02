@@ -79,5 +79,5 @@ public class HitSuccessCalculator : BaseSynchronizer
 
 public enum Stats
 {
-    сила, ловкость, выносливость, интеллект, мудрость, харизма
+    сила = 0, ловкость = 1, выносливость = 2, интеллект = 3, мудрость = 4, харизма = 5
 }

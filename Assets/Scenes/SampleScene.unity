@@ -10272,9 +10272,37 @@ PrefabInstance:
       value: Calculator Button
       objectReference: {fileID: 0}
     - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1443997348}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnValueChangedInvoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MyCharacterData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1500115071145770247}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5388848599409193771, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -20851,9 +20879,37 @@ PrefabInstance:
       value: Home Button
       objectReference: {fileID: 0}
     - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1443997348}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnValueChangedInvoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MyCharacterData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 2034979311}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5388848599409193771, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

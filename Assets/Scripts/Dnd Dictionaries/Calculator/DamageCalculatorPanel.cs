@@ -54,6 +54,9 @@ public class DamageCalculatorPanel : BaseSynchronizer
 
     private void DetailedDamageOutput()
     {
+        if(detailedSortedDamageLabel == null)
+            return;
+        
         StringBuilder sb = new StringBuilder();
         
         foreach (var damageInstance in DamageCalculator.Instance.DamageStack)

@@ -8053,6 +8053,18 @@ PrefabInstance:
       value: Inventory Button
       objectReference: {fileID: 0}
     - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1500115072024472312}
@@ -11062,6 +11074,18 @@ PrefabInstance:
     - target: {fileID: 5388848599409193768, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_Name
       value: Characte Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -16165,6 +16189,18 @@ PrefabInstance:
     - target: {fileID: 5388848599409193768, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_Name
       value: Abilities Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -26417,6 +26453,18 @@ PrefabInstance:
     - target: {fileID: 5388848599409193768, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_Name
       value: Home Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 5388848599409193770, guid: a553d60062d50c64fb5c27174561164a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

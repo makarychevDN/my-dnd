@@ -12,6 +12,7 @@ public class SaveInfoInFileManager : MonoBehaviour
     [SerializeField] private MasterBonus masterBonus;
     [SerializeField] private MainStats mainStats;
     [SerializeField] private Abilities abilities;
+    [SerializeField] private StringProvider fileNameProvider;
 
     [ContextMenu("Save")]
     public void Save()
@@ -67,7 +68,7 @@ public class SaveInfoInFileManager : MonoBehaviour
         }
 
         BinaryFormatter formatter = new BinaryFormatter();
-        FileStream savedFile = File.Create($"{Application.dataPath}/MyDndSave.bin");
+        FileStream savedFile = File.Create($"{Application.dataPath}/{fileNameProvider.TakeValue()}.bin");
         formatter.Serialize( savedFile, characterData);
         savedFile.Close();
     }
@@ -75,11 +76,11 @@ public class SaveInfoInFileManager : MonoBehaviour
     [ContextMenu("Load")]
     public void Load()
     {
-        if (!File.Exists($"{Application.dataPath}/MyDndSave.bin"))
+        if (!File.Exists($"{Application.dataPath}/{fileNameProvider.TakeValue()}.bin"))
             return;
 
         BinaryFormatter formatter = new BinaryFormatter();
-        FileStream savedFile = File.Open($"{Application.dataPath}/MyDndSave.bin", FileMode.Open);
+        FileStream savedFile = File.Open($"{Application.dataPath}/{fileNameProvider.TakeValue()}.bin", FileMode.Open);
 
         CharacterData characterData = (CharacterData)formatter.Deserialize(savedFile);
 

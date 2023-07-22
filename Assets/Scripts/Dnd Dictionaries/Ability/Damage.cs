@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +18,7 @@ public class Damage
 
         for (int i = 0; i < diceCount; i++)
         {
-            var tempDamage = Random.Range(1, diceValue + 1);
+            var tempDamage = UnityEngine.Random.Range(1, diceValue + 1);
             damageValues.Add(tempDamage);
             sum += tempDamage;
         }
@@ -39,6 +39,7 @@ public class Damage
     public string SourceName => sourceName;
 }
 
+[Serializable]
 public enum DamageType
 {
     рубящий = 0,

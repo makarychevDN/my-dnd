@@ -18,14 +18,9 @@ public class AbilityResources : MonoBehaviour
 
     private void InitFromPlayerPrefs()
     {
-        for (int i = 0; i < abilityResources.Count; i++)
-        {
-            Destroy(abilityResources[i].gameObject);
-        }
-        
-        abilityResources.Clear();
-        
-        if(PlayerPrefs.GetString("AbilityResources") == "")
+        ResetAbilitiesResources();
+
+        if (PlayerPrefs.GetString("AbilityResources") == "")
             return;
         
         var abilityResourceStrings = PlayerPrefs.GetString("AbilityResources").Split('~');
@@ -40,6 +35,31 @@ public class AbilityResources : MonoBehaviour
             abilityResources.Add(abilityResource);
             go.name = abilityResource.Name;
         }
+    }
+
+    public void InitFromFile(List<AbilityResourceData> abilityResourcesData)
+    {
+        ResetAbilitiesResources();
+
+        for (int i = 0; i < abilityResourcesData.Count; i++)
+        {
+            GameObject go = new GameObject();
+            go.transform.parent = transform;
+            AbilityResource abilityResource = go.AddComponent<AbilityResource>();
+            abilityResource.Init(abilityResourcesData[i].Name, abilityResourcesData[i].MaxCount, abilityResourcesData[i].CurrentCount);
+            AddAbilityResource(abilityResource);
+            go.name = abilityResource.Name;
+        }
+    }
+
+    private void ResetAbilitiesResources()
+    {
+        for (int i = 0; i < abilityResources.Count; i++)
+        {
+            Destroy(abilityResources[i].gameObject);
+        }
+
+        abilityResources.Clear();
     }
 
     public void AddAbilityResource(AbilityResource abilityResource)

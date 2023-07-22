@@ -16,7 +16,7 @@ public class AbilitiesSaver : BaseSynchronizer
     {
         StringBuilder sb = new StringBuilder();
 
-        foreach (var ability in abilities.abilities)
+        foreach (var ability in abilities.AbilitiesList)
         {
             sb.Append(
                 $"{ability.AbilityName}`{ability.DamageType}`{ability.DiceCount}`{ability.DiceValue}`{ability.AdditionDamage}~");

@@ -10,7 +10,7 @@ public class AbilitiesPanel : BaseSynchronizer
 
     protected override void Synchronize()
     {
-        if (abilityPanels.Count == Abilities.Instance.abilities.Count)
+        if (abilityPanels.Count == Abilities.Instance.AbilitiesList.Count)
             return;
 
         foreach (var t in abilityPanels)
@@ -20,11 +20,11 @@ public class AbilitiesPanel : BaseSynchronizer
 
         abilityPanels = new List<AbilityPanel>();
 
-        for (int i = 0; i < Abilities.Instance.abilities.Count; i++)
+        for (int i = 0; i < Abilities.Instance.AbilitiesList.Count; i++)
         {
             var tempPanel = Instantiate(panelPrefab, instancesParent);
             abilityPanels.Add(tempPanel);
-            tempPanel.Ability = Abilities.Instance.abilities[i];
+            tempPanel.Ability = Abilities.Instance.AbilitiesList[i];
         }
     }
 }

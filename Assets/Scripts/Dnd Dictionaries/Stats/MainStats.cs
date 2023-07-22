@@ -25,6 +25,29 @@ public class MainStats : MonoBehaviour
     {
         Instance = this;
 
+        /*if (System.IO.File.Exists($"{Application.dataPath}/MyDndSave.txt"))
+        {
+            _strength = PlayerPrefs.GetInt("str");
+            _strengthMod = CalculateModifier(_strength);
+
+            _dexterity = PlayerPrefs.GetInt("dex");
+            _dexterityMod = CalculateModifier(_dexterity);
+
+            _endurance = PlayerPrefs.GetInt("end");
+            _enduranceMod = CalculateModifier(_endurance);
+
+            _intelligence = PlayerPrefs.GetInt("int");
+            _intelligenceMod = CalculateModifier(_intelligence);
+
+            _wisdom = PlayerPrefs.GetInt("wis");
+            _wisdomMod = CalculateModifier(_wisdom);
+
+            _charisma = PlayerPrefs.GetInt("chr");
+            _charismaMod = CalculateModifier(_charisma);
+        }
+
+        print($"{Application.dataPath}/MyDndSave.txt");*/
+
         if (PlayerPrefs.HasKey("str"))
         {
             _strength = PlayerPrefs.GetInt("str");
@@ -45,6 +68,11 @@ public class MainStats : MonoBehaviour
             _charisma = PlayerPrefs.GetInt("chr");
             _charismaMod = CalculateModifier(_charisma);
         }
+    }
+
+    public void LoadStatsFromFile()
+    {
+
     }
 
     public int Strength

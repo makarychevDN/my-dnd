@@ -6,7 +6,17 @@ using UnityEngine;
 public class Abilities : MonoBehaviour
 {
     public static Abilities Instance;
-    public List<Ability> abilities;
+    [SerializeField] private List<Ability> abilities = new List<Ability>();
+    public List<Ability> AbilitiesList 
+    { 
+        get => abilities;
+        
+        set
+        {
+            abilities = value;
+            MyCharacterData.OnValueChanged.Invoke();
+        } 
+    }
 
     private void Awake()
     {
@@ -18,14 +28,9 @@ public class Abilities : MonoBehaviour
 
     public void InitFromPlayerPrefs()
     {
-        for (int i = 0; i < abilities.Count; i++)
-        {
-            Destroy(abilities[i].gameObject);
-        }
-        
-        abilities.Clear();
-        
-        if(PlayerPrefs.GetString("Abilities") == "")
+        ResetAbilitiesList();
+
+        if (PlayerPrefs.GetString("Abilities") == "")
             return;
         
         var abilityStrings = PlayerPrefs.GetString("Abilities").Split('~');
@@ -41,6 +46,36 @@ public class Abilities : MonoBehaviour
             abilities.Add(ability);
             go.name = ability.AbilityName;
         }
+
+        //MyCharacterData.OnValueChanged.Invoke();
+    }
+
+    public void InitFromFile(List<AbilityData> abilitiesData)
+    {
+        ResetAbilitiesList();
+
+        for (int i = 0; i < abilitiesData.Count; i++)
+        {
+            var abilityData = abilitiesData[i];
+            GameObject go = new GameObject();
+            go.transform.parent = transform;
+            Ability ability = go.AddComponent<Ability>();
+            ability.Init(abilityData.AbilityName, abilityData.DamageType, abilityData.DiceCount, abilityData.DiceValue, abilityData.AdditionDamage);
+            abilities.Add(ability);
+            go.name = ability.AbilityName;
+        }
+
+        MyCharacterData.OnValueChanged.Invoke();
+    }
+
+    private void ResetAbilitiesList()
+    {
+        for (int i = 0; i < abilities.Count; i++)
+        {
+            Destroy(abilities[i].gameObject);
+        }
+
+        abilities.Clear();
     }
 
     public void AddAbility(Ability skill)

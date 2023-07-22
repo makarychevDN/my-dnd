@@ -18,14 +18,9 @@ public class Skills : MonoBehaviour
 
     private void InitFromPlayerPrefs()
     {
-        for (int i = 0; i < skills.Count; i++)
-        {
-            Destroy(skills[i].gameObject);
-        }
-        
-        skills.Clear();
-        
-        if(PlayerPrefs.GetString("Skills") == "")
+        ResetSkillsList();
+
+        if (PlayerPrefs.GetString("Skills") == "")
             return;
         
         var skillStrings = PlayerPrefs.GetString("Skills").Split('~');
@@ -40,6 +35,31 @@ public class Skills : MonoBehaviour
             skills.Add(skill);
             go.name = skill.Name;
         }
+    }
+
+    public void InitFromFile(List<SkillData> skillsData)
+    {
+        ResetSkillsList();
+
+        for (int i = 0; i < skillsData.Count; i++)
+        {
+            GameObject go = new GameObject();
+            go.transform.parent = transform;
+            Skill skill = go.AddComponent<Skill>();
+            skill.Init(skillsData[i].Name, skillsData[i].Value);
+            AddSkill(skill);
+            go.name = skill.Name;
+        }
+    }
+
+    private void ResetSkillsList()
+    {
+        for (int i = 0; i < skills.Count; i++)
+        {
+            Destroy(skills[i].gameObject);
+        }
+
+        skills.Clear();
     }
 
     public void AddSkill(Skill skill)
